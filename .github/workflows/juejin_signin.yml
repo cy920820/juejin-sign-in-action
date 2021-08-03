@@ -1,0 +1,30 @@
+name: juejin_signin
+
+on:
+  push:
+    branches: 
+      - main
+  schedule:
+    - cron: '0 22 * * *'
+
+jobs:
+  juejin-autoSignIn:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: checkout
+      uses: actions/checkout@master
+    
+    - name: Set python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'
+    
+    - name: Install dependencies
+      run: python -m pip install --upgrade requests
+    
+    - name: juejin auto sign in
+      env:
+        JJ_COOKIE: ${{ secrets.JJ_COOKIE }}
+        SERVER_KEY: ${{ secrets.SERVER_KEY }}
+      run: python signin.py
