@@ -8,19 +8,19 @@
 
 2. 添加 Secrets
 
-方法：Settings -> Secrets -> New repository secret
+    方法：Settings -> Secrets -> New repository secret
 
-- JJ_COOKIE (掘金 cookie，去到掘金页面找到任一 api 即可获取；必填)
-- SERVER_KEY ([server 酱](https://sct.ftqq.com/sendkey) key，用于将脚本结果发送 server 酱通知；选填)
+    - JJ_COOKIE (掘金 cookie，去到掘金页面找到任一 api 即可获取；必填)
+    - SERVER_KEY ([server 酱](https://sct.ftqq.com/sendkey) key，用于将脚本结果发送 server 酱通知；选填)
 
 3. 修改 .github/workflows 定时策略 cron
 
-参考 github action 文档 [CRON](https://docs.github.com/cn/actions/reference/events-that-trigger-workflows#scheduled-events)
+    参考 github action 文档 [CRON](https://docs.github.com/cn/actions/reference/events-that-trigger-workflows#scheduled-events)
 
-```yml
-schedule:
-    - cron: '0 22 * * *'
-```
+    ```yml
+    schedule:
+        - cron: '0 22 * * *'
+    ```
 
 ## 免责
 
