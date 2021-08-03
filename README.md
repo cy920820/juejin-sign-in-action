@@ -1,6 +1,6 @@
 # 掘金每日签到 + 抽奖
 
-## Usage
+## 使用
 
 使用 github action 每日定时功能
 
