@@ -27,7 +27,7 @@ def send_server(title, content):
 if __name__ == '__main__':
     checkInResp = requests.post(checkInUrl, headers=headers, cookies={'Cookie': jj_cookie})
     lotteryResp = requests.post(lotteryUrl, headers=headers, cookies={'Cookie': jj_cookie})
-    resultMsg = "掘金签到\n" + checkInResp.text + "\n 抽奖结果\n" + lotteryResp.text
+    resultMsg = "掘金签到结果\n" + checkInResp.text + "\n 掘金抽奖结果\n" + lotteryResp.text
     if server_key:
         send_server('掘金签到+每日抽奖', resultMsg)
     else:
